@@ -10,10 +10,12 @@ const Course: CollectionConfig = {
     useAsTitle: "name",
   },
   access: {
-    read: ({ req: { user } }) => {
-      return false;
+    admin: ({ req: { user } }) => {
+      return Boolean(user);
     },
-    admin: () => true,
+    read: ({ req: { user } }) => {
+      return Boolean(user);
+    },
   },
   fields: [
     {
