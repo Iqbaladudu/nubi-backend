@@ -1,9 +1,4 @@
 import { CollectionConfig } from "payload/types";
-import ShortUniqueId from "short-unique-id";
-
-const uid = new ShortUniqueId({
-  dictionary: "alphanum_upper",
-});
 
 const Order: CollectionConfig = {
   slug: "orders",
@@ -21,9 +16,9 @@ const Order: CollectionConfig = {
       type: "text",
       required: true,
       admin: {
-        readOnly: true,
+        readOnly: false,
       },
-      defaultValue: () => `NUBI-${uid.stamp(10)}`,
+      defaultValue: () => `NUBI-`,
     },
     {
       name: "subscription_type",
