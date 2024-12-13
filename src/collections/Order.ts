@@ -25,7 +25,12 @@ const Order: CollectionConfig = {
       label: "Jenis Langganan",
       type: "relationship",
       relationTo: "subscription",
-      required: true,
+    },
+    {
+      name: "course_item",
+      label: "Nama Kursus",
+      type: "relationship",
+      relationTo: "course",
     },
     {
       name: "user",
