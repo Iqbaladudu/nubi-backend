@@ -23,15 +23,6 @@ const Course: CollectionConfig = {
       label: "Nama Kursus",
       type: "text",
       required: true,
-      access: {
-        read: ({ req: { user } }) => {
-          if (!user) {
-            return true;
-          } else {
-            return false;
-          }
-        },
-      },
     },
     {
       name: "description",
