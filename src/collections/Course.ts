@@ -24,6 +24,7 @@ const Course: CollectionConfig = {
       type: "text",
       required: true,
     },
+
     {
       name: "description",
       label: "Deskripsi",
@@ -42,6 +43,12 @@ const Course: CollectionConfig = {
       label: "Durasi",
       type: "number",
       required: true,
+    },
+    {
+      name: "thumbnail",
+      label: "Thumbnail Kursus",
+      type: "upload",
+      relationTo: "upload-document",
     },
     {
       name: "contents",
